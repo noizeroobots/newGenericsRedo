@@ -4,11 +4,11 @@ public class Fruit {
 
     private boolean fresh = true;
 
-    public boolean isFresh() {
+    public final boolean isFresh() {
         return fresh;
     }
 
-    public void setFresh(boolean fresh) {
+    public final void setFresh(final boolean fresh) {
         this.fresh = fresh;
     }
 }

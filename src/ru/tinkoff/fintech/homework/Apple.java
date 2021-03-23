@@ -4,11 +4,11 @@ public class Apple extends Fruit {
 
     private Apple apple;
 
-    public Apple getApple() {
+    public final Apple getApple() {
         return apple;
     }
 
-    public void setApple(Apple apple) {
+    public final void setApple(final Apple apple) {
         this.apple = apple;
     }
 }

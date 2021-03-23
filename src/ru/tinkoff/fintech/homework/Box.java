@@ -3,20 +3,26 @@ package ru.tinkoff.fintech.homework;
 public class Box<T> {
 
     protected Fruit fruit;
+    protected T box;
 
-    public Fruit getIfFresh() {
+    public final Fruit getIfFresh() {
         if (fruit != null && fruit.isFresh()) {
             return fruit;
         } else {
             return null;
         }
     }
-    public Fruit getFruit() {
+
+    public final Fruit getFruit() {
         return fruit;
     }
 
-    public void putFruit(Fruit fruit) {
+    public final void putFruit(final Fruit fruit) {
         this.fruit = fruit;
+    }
+
+    public final T getBox() {
+        return box;
     }
 
 }
