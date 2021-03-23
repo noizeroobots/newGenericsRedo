@@ -2,8 +2,11 @@ package ru.tinkoff.fintech.homework;
 
 public class BoxUtil {
 
-    public static void copyFromBoxToBox(Box<Apple> src, Box<Object> dest) {
-        dest.setFruit(src.fruit);
+    protected Fruit fruit;
+
+    public static void copyFromBoxToBox(Box<? extends Fruit> src, Box<Object> dest) {
+
+        dest.putFruit(src.getFruit());
     }
 
     // скопировать содержимое из Box(src) которая может быть типизирована только классом Fruit и его наследниками,

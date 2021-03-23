@@ -5,16 +5,15 @@ public class Main {
     public static void main(String[] args) {
 
 
-            Box<Apple> src = new Box<>();
-            src.setFruit(new Apple());
-            Box<Object> dest = new Box<>();
-            BoxUtil.copyFromBoxToBox(src, dest);
+        Box<Apple> srcBox = new Box<>();
+        srcBox.putFruit(new Apple());
+        Box<Object> destBox = new Box<>();
+        BoxUtil.copyFromBoxToBox(srcBox, destBox);
+        System.out.println(destBox.getFruit());
+        //console Apple@2a139a55
+    }
 
-            System.out.println(dest.getFruit();
-            //console Apple@2a139a55
-        }
-
-        }
+}
 
 
 

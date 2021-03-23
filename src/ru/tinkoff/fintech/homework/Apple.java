@@ -1,24 +1,14 @@
 package ru.tinkoff.fintech.homework;
 
-public class Apple<T extends Fruit> extends Fruit {
+public class Apple extends Fruit {
 
-    
-    private T apple;
+    private Apple apple;
 
-    public T getIfFresh() {
-        if (apple != null && apple.isFresh()) {
-            return apple;
-        } else {
-            return null;
-        }
-    }
-
-    public T get() {
+    public Apple getApple() {
         return apple;
     }
 
-    public void put(T element) {
-        this.apple = element;
-
+    public void setApple(Apple apple) {
+        this.apple = apple;
     }
 }

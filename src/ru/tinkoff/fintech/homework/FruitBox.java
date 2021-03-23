@@ -1,9 +1,6 @@
 package ru.tinkoff.fintech.homework;
 
-public class Box<T> {
-
-    protected Fruit fruit;
-
+public class FruitBox<T extends Fruit> extends Box<T>{
     public Fruit getIfFresh() {
         if (fruit != null && fruit.isFresh()) {
             return fruit;
@@ -11,12 +8,4 @@ public class Box<T> {
             return null;
         }
     }
-    public Fruit getFruit() {
-        return fruit;
-    }
-
-    public void putFruit(Fruit fruit) {
-        this.fruit = fruit;
-    }
-
 }
